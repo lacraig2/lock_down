@@ -48,13 +48,13 @@ class Fullscreen_Window:
 
 # this code gets run when the lock down button is pressed
 def lock_down_now():
-	print("do lock down")
+	if debug: print("do lock down")
 	# insert lock down code here
 	lock_button.configure(text = all_clear_text, command = all_clear, bg="green")
 
 # this code gets run when the all clear button is pressed
 def all_clear():
-	print("all clear")
+	if debug: print("all clear")
 	# instert all clear code here
 	lock_button.configure(text = lock_down_text, command = lock_down_now, bg="red")
 
